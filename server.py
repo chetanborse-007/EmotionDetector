@@ -1,3 +1,7 @@
+'''
+Route handlers for Emotion Detector web application
+'''
+
 from flask import Flask, render_template, request
 from EmotionDetection.emotion_detection import emotion_detector
 
@@ -31,8 +35,9 @@ def detect_emotion():
     # Return response with success status code
     return (
         f"For the given statement, the system response is 'anger': {response['anger']}, "
-        f"'disgust': {response['disgust']}, 'fear': {response['fear']}, 'joy': {response['joy']} and "
-        f"'sadness': {response['sadness']}. The dominant emotion is {response['dominant_emotion']}."
+        f"'disgust': {response['disgust']}, 'fear': {response['fear']}, "
+        f"'joy': {response['joy']} and 'sadness': {response['sadness']}. The dominant emotion "
+        f"is {response['dominant_emotion']}."
     )
 
 
